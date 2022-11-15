@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 75rem;
+  margin: 0 auto;
+  margin-top: 5.5rem;
+  padding: 2rem;
+  background-color: gray;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.card {
+  width: 100%;
+  height: 30rem;
+  background-color: rgb(218, 96, 96);
+}
+.btn--left {
+  /* In relation to the PARENT ELEMENT */
+  left: 0;
+  top: 50%;
+  /* In relation to the PARENT ITSELF */
+  transform: translate(-50%, -50%);
+}
