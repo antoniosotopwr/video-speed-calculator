@@ -6,6 +6,7 @@
 body {
   background: linear-gradient(45deg, #9facb1, #75c1ff);
   min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
 }
 .container {
   max-width: 75rem;

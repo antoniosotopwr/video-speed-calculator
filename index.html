@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <title>Video speed calculator</title>
-</head>
-<body>
+  </head>
+  <body>
     <main>
-        <section class="container">
-            <div class="card">
-                <form>
-                    
-                </form>
+      <section class="container">
+        <div class="card">
+          <form>
+            <div>
+              <label for="duration-minutes">Video duration in minutes:</label
+              ><br />
+              <input type="text" id="fname" name="duration-minutes" /><br />
             </div>
-        </section>
+            <div>
+              <label for="video-speed">Video speed:</label><br />
+              <select id="video-speed" name="video-speed" required="">
+                <option value="">Please choose one option:</option>
+                <option value="1.25">1.25x</option>
+                <option value="1.50">1.50x</option>
+                <option value="1.75">1.75x</option>
+                <option value="2">2x</option>
+              </select>
+            </div>
+          </form>
+        </div>
+      </section>
     </main>
-</body>
+  </body>
 </html>
