@@ -10,7 +10,7 @@
   <body>
     <main>
       <section class="container">
-        <div class="card">
+        <div class="card card-calc">
           <form>
             <div>
               <label for="duration-minutes">Video duration in minutes:</label
@@ -24,10 +24,22 @@
                 <option value="1.25">1.25x</option>
                 <option value="1.50">1.50x</option>
                 <option value="1.75">1.75x</option>
-                <option value="2">2x</option>
-              </select>
+                <option value="2">2x</option></select
+              ><br />
+              <button class="btn--calc-time">Check time</button>
             </div>
           </form>
+        </div>
+        <div class="card card-visual">
+          <div>
+            <label for="time saved">Time saved:</label><br />
+            <input class="input-time-saved"
+              type="text"
+              id="fname"
+              name="time-saved"
+              disabled
+            /><br />
+          </div>
         </div>
       </section>
     </main>
