@@ -69,6 +69,7 @@ button {
   background-color: rgb(223, 183, 183);
   margin-top: 1rem;
   align-self: center;
+  transition: all 0.1s ease-in-out;
 }
 button:hover,
 button:active {
