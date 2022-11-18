@@ -2,23 +2,26 @@
 const btn = document.querySelector(".btn--calc-time");
 try {
   btn.addEventListener("click", function () {
-    let lblDuration = Number(document.getElementById("duration-minutes").value);
+    let minutes = Number(document.getElementById("duration-minutes").value);
     const select = document.getElementById("video-speed");
     let selectedSpeed = Number(select.options[select.selectedIndex].value);
     const inputTimeSaved = document.getElementById("time-saved");
     const lblTimeSaved = document.getElementById("lblTimeSaved");
 
-    if (lblDuration === 0) {
+    const calcTimeSaved = function(minutes,selectedSpeed){
+      let newDuration = (minutes/selectedSpeed);
+      let timeSaved = minutes - newDuration ;
+      return [newDuration,timeSaved];
+    }
+
+    if (minutes === 0) {
       console.log("Please fill the minutes");
+      // Add a label to notify the error
     } else {
-      console.log(lblDuration);
-      console.log(selectedSpeed);
-      console.log("hello1");
       // document.querySelector(".show-time").textContent = lblDuration ;
-      document.querySelector(".input-show-time").value = selectedSpeed ;
-      console.log(lblDuration);
-      console.log(selectedSpeed);
-      console.log("hello2");
+      const [newDuration,timeSaved] = calcTimeSaved(minutes,selectedSpeed);
+      document.querySelector(".input-show-time-saved").value =  parseInt(timeSaved) + " minutes";
+      document.querySelector(".input-show-new-duration").value =  parseInt(newDuration) + " minutes";
     }
   });
 } catch (err) {
