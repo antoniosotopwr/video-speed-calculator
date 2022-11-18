@@ -18,10 +18,9 @@ try {
       console.log("Please fill the minutes");
       // Add a label to notify the error
     } else {
-      // document.querySelector(".show-time").textContent = lblDuration ;
       const [newDuration,timeSaved] = calcTimeSaved(minutes,selectedSpeed);
-      document.querySelector(".input-show-time-saved").value =  parseInt(timeSaved) + " minutes";
-      document.querySelector(".input-show-new-duration").value =  parseInt(newDuration) + " minutes";
+      document.querySelector(".input-show-time-saved").value =  Math.round(timeSaved) + " minutes";
+      document.querySelector(".input-show-new-duration").value =  Math.round(newDuration) + " minutes";
     }
   });
 } catch (err) {

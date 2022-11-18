@@ -5,62 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
     <script defer src="js/script.js"></script>
     <title>Video speed calculator</title>
   </head>
   <body>
     <main>
       <section class="container">
-        <div class="card card-calc">
-          <form>
-            <div>
-              <label for="duration-minutes">Video duration in minutes:</label
-              ><br />
-              <input
-                type="text"
-                id="duration-minutes"
-                name="duration-minutes"
-                placeholder="25"
-                required
-              /><br />
-            </div>
-            <div>
-              <label for="video-speed">Video speed:</label><br />
-              <select id="video-speed" name="video-speed" required="">
-                <option value="">Please choose one option:</option>
-                <option value="1.25">1.25x</option>
-                <option value="1.50">1.50x</option>
-                <option value="1.75">1.75x</option>
-                <option value="2">2x</option></select
-              ><br />
-            </div>
-          </form>
-          <button class="btn--calc-time">Check time</button>
-        </div>
-        <div class="card card-visual">
-          <div>
-            <label class="show-time-saved" id="lblTimeSaved" for="time saved"
-              >Saved time:</label
-            ><br />
+        <h1>Speed video calculator</h1>
+        <div class="card grid--2-col-row">
+          <div class="div-1">
+            <label for="duration-minutes">Video duration in minutes:</label>
             <input
-              class="input-show-time-saved"
               type="text"
-              id="time-saved"
-              name="time-saved"
-              disabled
-            /><br />
+              id="duration-minutes"
+              name="duration-minutes"
+              placeholder="25"
+              required
+            />
           </div>
-          <div>
-            <label class="show-new-duration" id="lblNewDuration" for="show-new-duration"
+          <div class="div-2">
+            <label for="video-speed">Video speed:</label>
+            <select id="video-speed" name="video-speed" required="">
+              <option value="">Please choose one option:</option>
+              <option value="1.25">1.25x</option>
+              <option value="1.50">1.50x</option>
+              <option value="1.75">1.75x</option>
+              <option value="2">2x</option>
+            </select>
+          </div>
+          <div class="div-3">
+            <label
+              class="show-new-duration"
+              id="lblNewDuration"
+              for="show-new-duration"
               >New duration:</label
-            ><br />
+            >
             <input
               class="input-show-new-duration"
               type="text"
               id="show-new-duration"
               name="show-new-duration"
               disabled
-            /><br />
+            />
+          </div>
+          <div class="div-4">
+            <label class="show-time-saved" id="lblTimeSaved" for="time saved"
+              >Saved time:</label
+            >
+            <input
+              class="input-show-time-saved"
+              type="text"
+              id="time-saved"
+              name="time-saved"
+              disabled
+            />
+          </div>
+          <div class="div-button">
+            <button class="btn--calc-time">Check time</button>
           </div>
         </div>
       </section>

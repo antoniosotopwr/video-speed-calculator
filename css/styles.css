@@ -4,35 +4,106 @@
   padding: 0;
 }
 body {
-  background: linear-gradient(45deg, #9facb1, #75c1ff);
-  min-height: 100vh;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(90deg, #9facb1, #75c1ff);
+  background-attachment: fixed;
 }
 .container {
   max-width: 75rem;
   margin: 0 auto;
-  margin-top: 5.5rem;
+  
   padding: 2rem;
-  background-color: gray;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-.card{
-  width: 100%;
-  height: 30rem;
-  display: grid;
+
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
+}
+.grid--2-col-row {
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 1rem;
+}
+.card {
+  width: 50%;
+  height: 20rem;
+  padding: 1rem;
   border-radius: 0.5rem;
   overflow: hidden;
+  display: grid;
+  background: linear-gradient(90deg, rgb(218, 96, 96), rgb(216, 141, 187));
 }
-.card-calc {
-  background-color: rgb(218, 96, 96);
+.card label {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
 }
-.card-visual {
-  background-color: rgb(216, 141, 187);
+.card input,
+.card select {
+  width: 100%;
+  padding: 0.3rem;
+  color: inherit;
+  border: none;
+  background-color: #fdf2e9;
+  border-radius: 0.4rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
 }
-form{
+.div-button {
+  justify-self: center;
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+button {
+  padding: 0.3rem 1rem;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  background-color: rgb(223, 183, 183);
+  margin-top: 1rem;
+  align-self: center;
+}
+button:hover,
+button:active {
+  color: white;
+  background-color: rgb(164, 44, 44);
+}
+
+form {
   display: grid;
   gap: 2rem;
+}
+
+/* 992px */
+@media (max-width: 62em) {
+  .card {
+    width: 50%;
+    height: 30rem;
+  }
+
+  .grid--2-col-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .container {
+    margin-top: 0;
+  }
+}
+
+/* 640px */
+@media (max-width: 40em) {
+  .card {
+    width: 100%;
+  }
 }
