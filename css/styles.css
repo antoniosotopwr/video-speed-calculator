@@ -11,9 +11,8 @@ body {
 .container {
   max-width: 75rem;
   margin: 0 auto;
-  
+  margin-top: 8rem;
   padding: 2rem;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -97,7 +96,7 @@ form {
     gap: 2rem;
   }
   .container {
-    margin-top: 0;
+    margin-top: 2rem;
   }
 }
 
