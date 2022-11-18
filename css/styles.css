@@ -23,6 +23,8 @@ body {
   display: grid;
   justify-content: center;
   align-items: center;
+  border-radius: 0.5rem;
+  overflow: hidden;
 }
 .card-calc {
   background-color: rgb(218, 96, 96);

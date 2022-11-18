@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/styles.css" />
+    <script defer src="js/script.js"></script>
     <title>Video speed calculator</title>
   </head>
   <body>
@@ -15,7 +16,13 @@
             <div>
               <label for="duration-minutes">Video duration in minutes:</label
               ><br />
-              <input type="text" id="fname" name="duration-minutes" /><br />
+              <input
+                type="text"
+                id="duration-minutes"
+                name="duration-minutes"
+                placeholder="25"
+                required
+              /><br />
             </div>
             <div>
               <label for="video-speed">Video speed:</label><br />
@@ -26,16 +33,19 @@
                 <option value="1.75">1.75x</option>
                 <option value="2">2x</option></select
               ><br />
-              <button class="btn--calc-time">Check time</button>
             </div>
           </form>
+          <button class="btn--calc-time">Check time</button>
         </div>
         <div class="card card-visual">
           <div>
-            <label for="time saved">Time saved:</label><br />
-            <input class="input-time-saved"
+            <label class="show-time" id="lblTimeSaved" for="time saved"
+              >Time saved:</label
+            ><br />
+            <input
+              class="input-show-time"
               type="text"
-              id="fname"
+              id="time-saved"
               name="time-saved"
               disabled
             /><br />
